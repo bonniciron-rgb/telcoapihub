@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: telco-api-hub
+  datasource:
+    url: jdbc:h2:mem:telcoapihub;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+hub:
+  # Admin key for billing/operations endpoints. Replace per environment.
+  admin-api-key: demo-admin-key
+  # CAMARA meta-release the northbound surface is aligned to.
+  camara-meta-release: Fall24
